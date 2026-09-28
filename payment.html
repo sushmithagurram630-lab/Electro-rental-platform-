@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - ElectroRent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>⚡ ElectroRent</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="categories.html">Categories</a>
+        <a href="cart.html">Cart 🛒</a>
+        <a href="my-rentals.html">My Rentals</a>
+    </nav>
+</header>
+
+<section class="form-section">
+    <div class="form-box">
+        <h1>💳 Rental Payment</h1>
+        <p>Complete your payment to confirm the rental.</p>
+
+        <div id="paymentSummary"></div>
+
+        <form onsubmit="makePayment(event)">
+            <input type="text" placeholder="Cardholder Name" required>
+            <input type="text" inputmode="numeric"
+                   placeholder="Card Number"
+                   minlength="12" maxlength="19" required>
+
+            <div style="display:flex;gap:10px">
+                <input type="text" placeholder="MM/YY" required>
+                <input type="password" inputmode="numeric"
+                       placeholder="CVV"
+                       minlength="3" maxlength="4" required>
+            </div>
+
+            <button type="submit" class="btn">
+                Pay & Confirm Rental
+            </button>
+        </form>
+
+        <p style="font-size:13px;margin-top:15px">
+            Demo payment page — no real payment is processed.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 ElectroRent</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
